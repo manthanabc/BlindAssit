@@ -13,13 +13,19 @@ A real-time navigation assistance system for visually impaired users, powered by
 
 ## 🚀 Quick Start
 
-### 1. Install Dependencies
+### 1. Watch the Demo
+
+**Demo Video:** [amd1.mp4](./amd1.mp4)
+
+See the BlindAssit navigation system in action with real-time semantic segmentation and AI-powered guidance.
+
+### 2. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Set Up OpenRouter API Key
+### 3. Set Up OpenRouter API Key
 
 **Get your API key:** https://openrouter.ai/keys
 
@@ -28,18 +34,18 @@ pip install -r requirements.txt
 export OPENROUTER_API_KEY="your-api-key-here"
 ```
 
-**Or add to `start_client_camera_demo.sh`:**
+**Or add to `start.sh`:**
 ```bash
 export OPENROUTER_API_KEY="your-api-key-here"
 ```
 
-### 3. Run the Server
+### 4. Run the Server
 
 ```bash
-./start_client_camera_demo.sh
+./start.sh
 ```
 
-### 4. Access the Web Interface
+### 5. Access the Web Interface
 
 Open: http://localhost:5000
 
