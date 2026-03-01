@@ -7,29 +7,17 @@ __pycache__/
 venv/
 env/
 ENV/
-*.egg-info/
-dist/
-build/
 
-# Environment variables
-.env
-.env.local
+# Server files
+server/
+*.sh
+requirements.txt
+*.md
 
-# Logs
-*.log
-server.log
-web_server.log
-
-# Temporary files
-*.tmp
-*.temp
-/tmp/
-temp/
-
-# OS files
-.DS_Store
-Thumbs.db
-.fuse_hidden*
+# Large files
+*.mp4
+*.pth
+*.pt
 
 # IDE
 .vscode/
@@ -37,40 +25,6 @@ Thumbs.db
 *.swp
 *.swo
 
-# Model weights (add these via LFS or download separately)
-*.pth
-*.onnx
-*.pkl
-*.pt
-
-# Video files (too large for git)
-*.mp4
-*.avi
-*.mov
-*.mkv
-*.webm
-
-# Audio files
-*.mp3
-*.wav
-*.ogg
-
-# Output files
-output/
-outputs/
-results/
-
-# Jupyter Notebooks
-.ipynb_checkpoints/
-*.ipynb
-
-# PyTorch
-*.ckpt
-*.pth.tar
-
-# MMEngine/MMCV
-work_dirs/
-*.json~
-
-# Git LFS
-.gitattributes
+# OS
+.DS_Store
+Thumbs.db
