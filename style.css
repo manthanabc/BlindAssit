@@ -498,14 +498,95 @@ h3 {
     font-size: 0.95rem;
 }
 
+.architecture-deep-dive {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 5rem auto 0 auto;
+    padding: 0 2rem;
+}
+
+.deep-dive-block h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    border-left: 2px solid var(--text-secondary);
+    padding-left: 1rem;
+}
+
+.deep-dive-block p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.deep-dive-block strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.feature-icon {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    border-bottom: 1px solid var(--text-secondary);
+    padding-bottom: 0.5rem;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
 .haptics-section {
     padding-top: 4rem;
 }
 
-.haptics-demonstration {
-    max-width: 1000px;
+.haptics-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    align-items: center;
+}
+
+.haptics-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.haptics-text p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.haptics-text strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.highlight-text {
+    font-family: var(--font-mono);
+    color: var(--text-primary) !important;
+    border-left: 2px solid var(--text-primary);
+    padding-left: 1rem;
+    margin-top: 2rem;
+}
+
+.haptics-demonstration {
+    width: 100%;
 }
 
 .video-container {
@@ -528,6 +609,16 @@ h3 {
     align-self: flex-start;
     max-width: 100%;
     background: rgba(0, 0, 0, 0.7);
+}
+
+.sam-mask {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 280px;
+    height: 50px;
+    background-color: var(--glass-bg);
+    z-index: 10;
 }
 
 footer {
@@ -577,8 +668,20 @@ footer {
         height: 400px;
     }
 
-    .features-grid {
+    .features-grid,
+    .architecture-deep-dive {
         grid-template-columns: 1fr;
+    }
+
+    .haptics-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .architecture-deep-dive {
+        margin-top: 3rem;
+        gap: 2rem;
+        text-align: left;
     }
 
     .navbar {

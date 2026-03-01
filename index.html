@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aura | Vision Redefined</title>
+    <title>Occulant | Vision Redefined</title>
     <meta name="description"
         content="State of the art system for visual navigation making use of AI, VLMs, Custom YOLOv11seg, and Haptic feedback.">
     <link
@@ -17,7 +17,7 @@
     <div id="noise"></div>
 
     <nav class="navbar">
-        <div class="logo">AURA<span>.sys</span></div>
+        <div class="logo">OCCULANT<span>.sys</span></div>
         <div class="nav-links">
             <a href="#system">System</a>
             <a href="#architecture">Architecture</a>
@@ -163,10 +163,34 @@
                     obstacle blocking the immediate path."</p>
             </div>
             <div class="feature-card" data-tilt>
-                <div class="feature-icon">TELEMTRY</div>
+                <div class="feature-icon">TELEMETRY</div>
                 <h3>Spatial Haptics</h3>
                 <p>Translates 3D spatial data into high-fidelity haptic waveforms. Feel the proximity, speed, and
                     dimensions of objects around you via wearable matrices.</p>
+            </div>
+        </div>
+
+        <div class="architecture-deep-dive">
+            <div class="deep-dive-block">
+                <h3>Continuous Feedback Loop</h3>
+                <p>At the center of Occulant's architecture is the real-time feedback loop. A stereo
+                    <strong>VIDEO</strong> array feeds continuous optical data to our local
+                    <strong>VisionAssist</strong> edge processor. This low-power module manages raw signal denoising
+                    before handing it over to the cloud or local <strong>ML Model</strong>.</p>
+            </div>
+            <div class="deep-dive-block">
+                <h3>Multi-Stage Perception</h3>
+                <p>Unlike standard detection pipelines, our approach utilizes dual-stage validation. A lightweight
+                    <strong>LLM</strong> runs asynchronously alongside the core detection engine, correcting semantic
+                    misclassifications and providing a cohesive situational context (e.g., recognizing that a collection
+                    of segmented metal parts is actually a bicycle).</p>
+            </div>
+            <div class="deep-dive-block">
+                <h3>The Final Mile: Interaction</h3>
+                <p>Data from the models must be synthesized predictably. Through spatial sonification and directed
+                    haptics, the <strong>User</strong> node receives continuous feedback without sensory overload. The
+                    user directly issues <strong>asks</strong> directly to VisionAssist (via voice or peripheral
+                    triggers), instantly recalibrating the network's priority vectors.</p>
             </div>
         </div>
     </section>
@@ -178,29 +202,48 @@
                 dynamic obstacles.</p>
         </div>
 
-        <div class="haptics-demonstration">
-            <div class="video-container">
-                <video src="haptics_video.mp4" autoplay loop muted playsinline class="segmentation-video"></video>
+        <div class="haptics-layout">
+            <div class="haptics-text">
+                <h3>Bridging Perception to Sensation</h3>
+                <p>The visual world is hopelessly dense. Occulant extracts the salient features of any scene in
+                    real-time, masking out irrelevant background noise and focusing computing power entirely on
+                    navigational hazards.</p>
+                <p>In the demonstrator adjacent, the <strong>YOLOv11 Segmentation</strong> module precisely masks a
+                    pedestrian. The Vision-Language Model interprets this as an immediate trajectory threat and
+                    formulates actionable language. This textual vector is instantly converted to a physical map: a
+                    rapid pulsing sequence localized on the user's left haptic actuator array, alerting them to slow
+                    down.</p>
+                <p class="highlight-text">No screens. No delay. Pure intuition.</p>
+            </div>
 
-                <div class="ui-overlay">
-                    <div class="top-left corner"></div>
-                    <div class="top-right corner"></div>
-                    <div class="bottom-left corner"></div>
-                    <div class="bottom-right corner"></div>
+            <div class="haptics-demonstration">
+                <div class="video-container">
+                    <video src="haptics_video.mp4" autoplay loop muted playsinline class="segmentation-video"></video>
 
-                    <div class="status-panel">
-                        <div class="status-item">
-                            <div class="dot blinking"></div> SEGMENTATION: ACTIVE
+                    <div class="ui-overlay">
+                        <div class="top-left corner"></div>
+                        <div class="top-right corner"></div>
+                        <div class="bottom-left corner"></div>
+                        <div class="bottom-right corner"></div>
+
+                        <div class="status-panel">
+                            <div class="status-item">
+                                <div class="dot blinking"></div> SEGMENTATION: ACTIVE
+                            </div>
+                            <div class="status-item">
+                                <div class="dot blinking"></div> SPATIAL MAP: LINKED
+                            </div>
                         </div>
-                        <div class="status-item">
-                            <div class="dot blinking"></div> SPATIAL MAP: LINKED
+
+                        <div class="terminal-readout context-box" id="haptics-context">
+                            <span id="haptic-msg-1" style="opacity: 0; transition: opacity 0.5s ease;">> Keep heading
+                                straight.</span><br>
+                            <span id="haptic-msg-2"
+                                style="opacity: 0; transition: opacity 0.5s ease; transition-delay: 2s;">> Slow down,
+                                person ahead.</span>
                         </div>
                     </div>
-
-                    <div class="terminal-readout context-box">
-                        > Keep heading straight.<br>
-                        > Slow down, person ahead.
-                    </div>
+                    <div class="sam-mask"></div>
                 </div>
             </div>
         </div>
@@ -208,8 +251,8 @@
 
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">AURA<span>.sys</span></div>
-            <p class="copyright">&copy; 2026 Aura Vision Systems. All rights reserved.</p>
+            <div class="footer-logo">OCCULANT<span>.sys</span></div>
+            <p class="copyright">&copy; 2026 Occulant Vision Systems. All rights reserved.</p>
         </div>
     </footer>
 

@@ -203,4 +203,23 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.transform = `perspective(1000px) rotateX(0) rotateY(0) translateY(0)`;
         });
     });
+
+    // Observer for haptics sequential text fade-in
+    const hapticsContext = document.getElementById('haptics-context');
+    const msg1 = document.getElementById('haptic-msg-1');
+    const msg2 = document.getElementById('haptic-msg-2');
+
+    if (hapticsContext && msg1 && msg2) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => { msg1.style.opacity = '1'; }, 500);
+                    setTimeout(() => { msg2.style.opacity = '1'; }, 2500);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(hapticsContext);
+    }
 });
